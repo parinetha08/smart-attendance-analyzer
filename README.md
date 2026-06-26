@@ -76,10 +76,6 @@ http://127.0.0.1:5000
 
 ## 📷 Screenshots
 
-Add screenshots in a folder named **screenshots**.
-
-Example:
-
 ```
 screenshots/
 ├── home.png
@@ -92,19 +88,19 @@ Then display them like this:
 
 ### Home Page
 
-![Home](screenshots/home.png)
+![Home](screenshots/Home.png)
 
 ### Attendance Input
 
-![Input](screenshots/input-form.png)
+![Input](screenshots/Input.png)
 
 ### Analysis Result
 
-![Result](screenshots/result.png)
+![Result](screenshots/Result.png)
 
 ### Attendance Graph
 
-![Graph](screenshots/graph.png)
+![Graph](screenshots/Graph.png)
 
 ## 🎯 Future Improvements
 
