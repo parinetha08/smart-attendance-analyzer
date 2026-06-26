@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            text-align: center;
+        }
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 40%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        .safe { color: green; }
+        .warning { color: orange; }
+        .danger { color: red; }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background: black;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Attendance Report</h2>
+
+{% for sub in subjects %}
+<div class="card">
+    <h3>{{ sub.name }}</h3>
+    <p>Attendance: {{ sub.percent }}%</p>
+
+    <p class="
+        {% if sub.status == 'SAFE' %}safe
+        {% elif sub.status == 'WARNING' %}warning
+        {% else %}danger
+        {% endif %}
+    ">
+        Status: {{ sub.status }}
+    </p>
+
+    <p>Classes needed: {{ sub.needed }}</p>
+</div>
+{% endfor %}
+
+{% if graph %}
+    <h2>Attendance Graph</h2>
+    <img src="{{ url_for('static', filename='graph.png') }}" width="500">
+{% endif %}
+
+<br>
+<a href="/">Go Back</a>
+
+</body>
+</html>

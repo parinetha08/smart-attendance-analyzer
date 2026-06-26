@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Analyzer</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f6f8;
+            text-align: center;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            margin: 100px auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <h2>Smart Attendance Analyzer</h2>
+
+    <form action="/form" method="POST">
+        <input type="number" name="num" placeholder="Enter number of subjects" required>
+        <button type="submit">Next</button>
+    </form>
+</div>
+</body>
+</html>
